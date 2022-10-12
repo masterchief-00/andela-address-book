@@ -1,0 +1,253 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: #ddd;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    background-color: white;
+    height: 100vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 20vh;
+    width: 100%;
+    background: linear-gradient(45deg, rgb(40, 83, 161), rgb(20, 247, 228));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.main-content button {
+    background-color: rgb(3, 115, 119);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    height: 60px;
+    padding: 10px;
+    border: solid 1px transparent;
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.main-content button:hover {
+    background-color: rgb(7, 247, 255);
+    color: black;
+    border-color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 1rem;
+    width: 40vw;
+    background-color: rgb(3, 115, 119);
+    cursor: pointer;
+}
+
+.contact:hover {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 3px 3px 20px black;
+}
+
+.contact label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.575);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+
+}
+
+.modal-content {
+    background-color: white;
+    width: 60vw;
+    height: max-content;
+    padding: 20px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-details button{
+    background-color: rgb(3, 115, 119);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    height: 20px;
+    border: solid 1px transparent;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.contact-details button:hover{
+    background-color: rgb(7, 247, 255);
+    color: black;
+    border-color: black;
+    transition: all 0.2s ease-in-out;
+}
+.detail-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.detail-group label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.add-contact-modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.575);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+}
+
+.new-address-content {
+    background-color: white;
+    width: 60vw;
+    height: max-content;
+    padding: 20px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-address-content h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.new-address-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-address-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.new-address-form form input {
+    border: none;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    border-bottom: solid 1px rgb(3, 115, 119);
+}
+
+.new-address-form form input::placeholder {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.new-address-form button {
+    background-color: rgb(3, 115, 119);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    height: 50px;
+    border: solid 1px transparent;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.new-address-form button:hover {
+    background-color: rgb(7, 247, 255);
+    color: black;
+    border-color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.close{
+    background-color: rgb(119, 3, 13);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    height: 20px;
+    width: 32vw;
+    border: solid 1px transparent;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.close:hover{
+    background-color: rgb(7, 247, 255);
+    color: black;
+    border-color: black;
+    transition: all 0.2s ease-in-out;
+}
+.temp{
+    border: dashed 1px black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temp label{
+    color: rgba(0, 0, 0, 0.521);
+}

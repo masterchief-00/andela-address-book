@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address Book</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body onload="loadContacts()">
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">
+          <h1>Address book</h1>
+        </div>
+        <div class="main-content">
+          <button onclick="toggleAddContact()">Add a new contact</button>
+          <div class="contacts" id="savedContacts">
+            <div class="temp" id="temp">
+              <label>THE ADDRESS BOOK IS EMPTY</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="details-modal">
+        <div class="modal-content">
+          <h1>Contact details</h1>
+          <div class="contact-details" id="details-content">
+            
+          </div>
+        </div>
+      </div>
+      <div class="add-contact-modal" id="contact-modal">
+        <div class="new-address-content">
+          <h1>New contact</h1>
+          <div class="new-address-form">
+            <form onsubmit="addContact(event)" id="contact-form">
+              <input type="text" placeholder="Names" id="names" />
+              <input type="text" placeholder="Address" id="address" />
+              <input type="email" placeholder="Email" id="email" />
+              <input type="text" placeholder="Phone" id="phone" />
+              <button type="submit">Save contact</button>
+            </form>
+          </div>
+          <button class="close" onclick="closeAddNew()">Close</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
